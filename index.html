@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/dist/output.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily:{
+        roboto: ['Roboto', 'sans-serif']
+      },
+      colors:{
+      primary: "#F9D370"
+    }
+          }
+        }
+      }
+    </script>
+
+<style type="text/tailwindcss">
+  @layer utilities {
+    .content-auto {
+      content-visibility: auto;
+    }
+  }
+</style>
+
+</head>
+
+<body class="bg-[#F3F6FF]">
+  <!-- <h1 class="text-3xl font-bold">
+    Hello world!
+  </h1> -->
+  <header>
+    <nav class="lg:px-16 md:px-10 px-8 flex font-roboto justify-between items-center bg-[#F9D370] py-4">
+      <div class="flex items-center gap-2">
+        <img src="./assets/image 5.png" alt="">
+        <p class="lg:text-[28px] md:text-[20px] text-[18px] font-bold">BRAND NAME</p>
+      </div>
+
+      <div>
+
+        <ul class="gap-5 lg:flex md:flex hidden">
+          <li class="text-[16px] font-bold font-roboto uppercase">home</li>
+          <li class="text-[16px] font-bold font-roboto uppercase">store</li>
+          <li class="text-[16px] font-bold font-roboto uppercase">accesories</li>
+          <li class="text-[16px] font-bold font-roboto uppercase">brand</li>
+          <li class="text-[16px] font-bold font-roboto uppercase">pages</li>
+          <li class="text-[16px] font-bold font-roboto uppercase">about us</li>
+          <li class="text-[16px] font-bold font-roboto uppercase">news</li>
+        </ul>
+      </div>
+
+      <div class="lg:block md:block hidden">
+        <button
+          class="uppercase font-bold font-roboto text-[16px] hover:text-[#ffffff] hover:transition hover:scale-105 duration-300 ease-in">contact
+          us</button>
+
+
+      </div>
+
+      <div class="lg:hidden md:hidden flex gap-3">
+        <img class="w-[24px] h-[27px]" src="./assets/Group 41.png" alt="">
+        <img class="w-[24px] h-[27px]" src="./assets/image 7.png" alt="">
+        <img class="w-[24px] h-[27px]" src="./assets/Group 225.png" alt="">
+      </div>
+
+
+
+    </nav>
+
+    <div class="lg:px-16 md:px-10 px-8 flex justify-center items-center  py-5">
+      <img class="relative w-[31.85px] h-[25.2px] z-10 lg:right-[185px] md:right-[125px] right-[80px]"
+        src="./assets/search.png" alt="">
+      <input
+        class="lg:w-[516px] md:w-[416px] w-[316px] absolute border-2 border-black rounded-full  h-[40px] pl-10 pr-32"
+        type="text">
+      <button
+        class="capitalize bg-[#4C8787] h-[33px] w-[100px] rounded-full text-white relative lg:left-[186px] md:left-[135px] left-[85px] hover:scale-105 duration-300 ease-in hover:bg-primary hover:text-[#ffffff]">search</button>
+
+
+
+
+
+    </div>
+
+
+
+
+  </header>
+
+  <!-- hero -->
+
+  <div
+    class="lg:px-16 md:px-10 px-8 lg:flex md:grid grid font-roboto items-center justify-center bg-primary lg:gap-0 md:gap-20 gap-5 py-10">
+    <div class="lg:w-1/2 md:w-full w-full flex justify-center items-center">
+      <img src="./assets/image 2.png" alt="">
+    </div>
+    <div class="lg:w-1/2 md:w-full w-full grid items-center gap-5">
+      <div class="grid lg:gap-0 md:gap-5 gap-5">
+        <p class="lg:text-[22px] md:text-[32px] text-[22px] font-bold font-roboto text-black">HOT DEALS THIS WEEK</p>
+        <p
+          class="lg:text-[48px] md:text-[60px] text-[38px] font-bold font-roboto text-[#A86A3D] lg:w-[466px] text-center">
+          SALE 50% OFF MODERN FURNITURE</p>
+      </div>
+      <button class="bg-[#4C8787] w-[124px] h-[50px] text-[#ffffff]">VIEW NOW</button>
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <!-- Vinatage -->
+
+
+  <div class="lg:px-16 md:px-10 px-8 lg:flex md:grid grid items-center py-10 lg:gap-0 md:gap-3 gap-5  justify-center">
+    <div class="lg:w-1/2 md:w-full w-full lg:flex md:flex grid items-center">
+      <img class="w-[283px] h-[283px]" src="./assets/image 3.png" alt="">
+      <div class="grid gap-12">
+        <p class="text-[28px] font-roboto font-bold">INNY VINTAGE CHAIR</p>
+        <button class="bg-[#4C8787] w-[124px] h-[50px] text-[#ffffff]">VIEW DETAILS</button>
+      </div>
+
+    </div>
+
+    <div class="lg:w-1/2 bg-[#EAE9E7] md:w-full w-full lg:flex md:flex grid items-center px-5 lg:pb-0 md:pb-0 pb-5">
+      <img class="w-[283px] h-[283px]" src="./assets/image 4.png" alt="">
+      <div class="grid gap-12">
+        <p class="text-[28px] font-roboto font-bold">LARGE TERRACOTA VASE </p>
+        <button class="bg-[#4C8787] w-[124px] h-[50px] text-[#ffffff]">VIEW DETAILS</button>
+      </div>
+
+    </div>
+    
+
+  </div>
+
+  
+
+
+
+
+
+
+</body>
+
+</html>
