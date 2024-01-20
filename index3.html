@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        roboto: ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: "#F9D370"
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="lg:px-16 md:px-10 px-8 flex font-roboto justify-between items-center bg-[#F9D370] py-4">
+            <div class="flex items-center gap-2">
+                <img src="../assets/image 5.png" alt="">
+                <p class="lg:text-[28px] md:text-[20px] text-[18px] font-bold">BRAND NAME</p>
+            </div>
+
+            <div>
+
+                <ul class="gap-5 lg:flex md:flex hidden">
+                    <li onclick="navigateTo('home')" class="text-[16px] font-bold font-roboto uppercase cursor-pointer">
+                        home</li>
+                    <li onclick="navigateTo('brand')"
+                        class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">category</li>
+                    <li onclick="navigateTo('store')"
+                        class="text-[16px] font-bold font-roboto uppercase cursor-pointer">product</li>
+                    <!-- <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">accesories</li> -->
+                    <li onclick="navigateTo('cart')"
+                        class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">cart</li>
+                    <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">ui kit</li>
+                </ul>
+            </div>
+
+
+
+            <div class="lg:block md:block hidden">
+                <button
+                    class="uppercase font-bold font-roboto text-[16px] hover:text-[#ffffff] hover:transition hover:scale-105 duration-300 ease-in">contact
+                    us</button>
+
+
+            </div>
+
+            <div class="lg:hidden md:hidden flex gap-3">
+                <img class="w-[24px] h-[27px]" src="../assets/Group 41.png" alt="">
+                <img class="w-[24px] h-[27px]" src="../assets/image 7.png" alt="">
+                <img class="w-[24px] h-[27px]" src="../assets/Group 225.png" alt="">
+            </div>
+
+
+
+        </nav>
+
+        <div class="lg:px-16 md:px-10 px-8 flex justify-center items-center py-5">
+            <img class="relative w-[31.85px] h-[25.2px] z-10 lg:right-[185px] md:right-[125px] right-[80px]"
+                src="../assets/search.png" alt="">
+            <input
+                class="lg:w-[516px] md:w-[416px] w-[316px] absolute border-2 border-black rounded-full  h-[40px] pl-10 pr-32"
+                type="text">
+            <button
+                class="capitalize bg-[#4C8787] h-[33px] w-[100px] rounded-full text-white relative lg:left-[186px] md:left-[135px] left-[85px] hover:scale-105 duration-300 ease-in hover:bg-primary hover:text-[#ffffff]">search</button>
+
+
+
+
+
+        </div>
+
+
+
+        <div class="lg:px-16 md:px-10 px-8 font-roboto" style="color: rgba(0, 0, 0, 0.50);">
+            <p class="font-roboto text-[16px] text-center">HOMEPAGE/ BRAND/ H&M HOME/ BEDROOM/duvet cover sets</p>
+        </div>
+
+
+
+
+    </header>
+
+
+    <div class="lg:px-16 md:px-10 px-8">
+
+
+        <div class="lg:flex md:grid grid py-4 md:justify-center lg:justify-between justify-center">
+            <div class="grid lg:w-[60%] md:w-[60%] w-full gap-4 ">
+                <div class="lg:flex md:flex grid gap-4 ">
+                    <img class="lg:w-[60%] md:w-[60%] w-full h-[500px]" src="../assets/Rectangle 83.png" alt="">
+                    <img class="lg:w-[60%] md:w-[60%] w-full h-[500px]" src="../assets/Rectangle 82.png" alt="">
+                </div>
+                <div>
+                    <img class="lg:w-[850px] md:w-[850px] w-full h-[300px]" src="../assets/Rectangle 97.png" alt="">
+                </div>
+                <div>
+                    <img class="lg:w-[850px] md:w-[750px] w-full h-[300px]" src="../assets/Group 218.png" alt="">
+                </div>
+            </div>
+            <div class="lg:w-[30%] md:w-[40%] w-[full]">
+                <p class="py-2 font-roboto text-[28px] font-bold">Checked Duvet Cover Set</p>
+
+                <p class="py-2 font-roboto text-[24px] font-bold">39.99$
+                </p>
+
+                <img class="py-2 w-[300px] h-[100px]" src="../assets/Group 138.png" alt="">
+
+                <img class="py-2 w-[184px] h-[42px]" src="../assets/Group 149.png" alt="">
+
+                <div class="grid gap-2 pl-4 justify-center items-center">
+                    <img class="lg:w-[367px] md:w-[300px] w-[300px] h-[54px]" src="../assets/Rectangle 79.png" alt="">
+                    <button
+                        class="lg:w-[367px] md:w-[300px] w-[300px]  h-[54px] bg-[#4C8787] text-[#FFFFFF] font-roboto text-[16px] items-center">Add
+                        to Cart</button>
+                    <!-- <img class="w-[367px] h-[54px]" src="../assets/Rectangle 84.png" alt=""> -->
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="lg:px-16 md:px-10 px-8 py-6">
+        <div class="lg:flex md:grid-cols-2 gap-4 grid lg:justify-between md:justify-between justify-center">
+
+            <div class="grid">
+                <img class="w-[300px] h-[300px]" src="../assets/Rectangle 67.png" alt="">
+                <p class="font-roboto text-[20px] font-bold">Flannel Duvet Cover Set</p>
+                <div>
+                    <img class="w[40px] h-[10px]" src="../assets/Group 111 (7).png" alt="">
+                </div>
+                <p class="text-[20px] font-roboto font-bold">30$</p>
+            </div>
+
+            <div class="grid">
+                <img class="w-[300px] h-[300px]" src="../assets/Rectangle 76 (1).png" alt="">
+                <p class="font-roboto text-[20px] font-bold">Ribbed Wool-blend Throw</p>
+                <div>
+                    <img class="w[40px] h-[10px]" src="../assets/Group 111 (7).png" alt="">
+                </div>
+                <p class="text-[20px] font-roboto font-bold">30$</p>
+
+            </div>
+
+            <div class="grid">
+                <img class="w-[300px] h-[300px]" src="../assets/Rectangle 70.png" alt="">
+                <p class="font-roboto text-[16px] font-bold">Fitted Cotton Sheet</p>
+                <div>
+                    <img class="w[40px] h-[10px]" src="../assets/Group 111 (7).png" alt="">
+                </div>
+                <p class="text-[20px] font-roboto font-bold">30$</p>
+            </div>
+
+            <div class="grid">
+                <img class="w-[300px] h-[300px]" src="../assets/Rectangle 75.png" alt="">
+                <p class="font-roboto text-[16px] font-bold">Washed Linen Pillowcase</p>
+                <div>
+                    <img class="w[40px] h-[10px]" src="../assets/Group 111 (7).png" alt="">
+                </div>
+                <p class="text-[20px] font-roboto font-bold">30$</p>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    <div class="">
+        <div class="w-[100] bg-[#0A032A] mt-6">
+            <div class="lg:flex md:grid grid justify-between items-center font-roboto lg:px-16 md:px-15 px-14 py-10">
+                <div class="grid gap-3">
+                    <h1 class="uppercase text-[18px] text-[#ffffff] font-roboto">brand name</h1>
+                    <p class="text-[12px] text-[#FFFFFF80]">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                        <br>Doloremque quasi nam non deserunt eaque totam.
+                    </p>
+                    <div class="grid text-[#ffffff] text-[12px] font-roboto">
+                        <p>121 King Street, Melbourne 3000</p>
+                        <p>+123 0000 0000</p>
+                        <p>contact@brandemail.com</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <img class="w-[16.87px] h-[19.93px]" src="../assets/Vector.png" alt="">
+                        <img class="w-[16.87px] h-[19.93px]" src="../assets/ant-design_twitter-outlined.png" alt="">
+                        <img class="w-[16.87px] h-[19.93px]" src="../assets/ant-design_instagram-filled.png" alt="">
+                        <img class="w-[16.87px] h-[19.93px]" src="../assets/vaadin_youtube.png" alt="">
+                    </div>
+
+
+                </div>
+                <div class="grid text-[#ffffff] text-[12px] gap-3 lg:pt-0 md:pt-2 pt-3 ">
+                    <h1 class="text-[18px] text-[#ffffff]">SHOPPING</h1>
+
+
+                    <p>Your carts</p>
+                    <p>Your Orders</p>
+                    <p> Compared items</p>
+                    <p> Wishlist items</p>
+
+                    <p>Shipping detail </p>
+
+
+
+
+                </div>
+                <div class="grid text-[#ffffff] text-[12px] gap-3">
+                    <h1 class="text-[18px] text-[#ffffff]">MORE LINK</h1>
+                    <p>Blog</p>
+                    <p>Gift Center</p>
+                    <p> Buying Guides</p>
+                    <p> New Arrivals</p>
+                    <p> Clearance</p>
+
+                </div>
+                <div class="text-[#ffffff] text-[18px] gap-3">
+                    <h1>promo update</h1>
+
+                    <div class="grid text-[#ffffff] text-[12px] gap-4">
+
+
+                        <div class="flex text-[13px] items-center gap-2">
+                            <h1 class="text-[20px]">14</h1>
+                            <p>May</p>
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit.</p>
+
+                        <p>3comments</p>
+
+                        <hr>
+                        <div class="flex items-center gap-2">
+                            <h1 class="text-[20px]">15</h1>
+                            <p>July</p>
+                        </div>
+
+                        <p>Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit.</p>
+
+                        <p>3comments</p>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="bg-[#000] h-[40px] grid justify-center items-center">
+
+            <p class="font-roboto text-[#ffffff] text-center">Brand Registered Name © – All rights reserved </p>
+
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+
+
+
+
+</body>
+
+</html>

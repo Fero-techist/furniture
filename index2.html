@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link href="/dist/output.css" rel="stylesheet">
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        roboto: ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: "#F9D370"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
 </head>
 
 <body>
@@ -23,16 +46,23 @@
             <div>
 
                 <ul class="gap-5 lg:flex md:flex hidden">
-                  <li onclick="navigateTo('home')" class="text-[16px] font-bold hover:transition hover:scale-105 duration-300 ease-out font-roboto uppercase cursor-pointer">home</li>
-                  <li onclick="navigateTo('brand')" class="text-[16px] font-bold hover:transition hover:scale-105 duration-300 ease-out font-roboto uppercase cursor-pointer ">category</li>
-                  <li onclick="navigateTo('store')" class="text-[16px] font-bold hover:transition hover:scale-105 duration-300 ease-out font-roboto uppercase cursor-pointer">product</li>
-                  <!-- <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">accesories</li> -->
-                  <li onclick="navigateTo('cart')" class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">cart</li>
-                  <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">ui kit</li>
+                    <li onclick="navigateTo('home')"
+                        class="text-[16px] font-bold hover:transition hover:scale-105 duration-300 ease-out font-roboto uppercase cursor-pointer">
+                        home</li>
+                    <li onclick="navigateTo('brand')"
+                        class="text-[16px] font-bold hover:transition hover:scale-105 duration-300 ease-out font-roboto uppercase cursor-pointer ">
+                        category</li>
+                    <li onclick="navigateTo('store')"
+                        class="text-[16px] font-bold hover:transition hover:scale-105 duration-300 ease-out font-roboto uppercase cursor-pointer">
+                        product</li>
+                    <!-- <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">accesories</li> -->
+                    <li onclick="navigateTo('cart')"
+                        class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">cart</li>
+                    <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">ui kit</li>
                 </ul>
-              </div>
+            </div>
 
-          
+
 
             <div class="lg:block md:block hidden">
                 <button
@@ -114,253 +144,254 @@
     <div class="">
 
 
-        
 
-            <div class="lg:px-16 md:10px px-8 lg:flex md:flex grid w-full lg:justify-between md:justify-between justify-center py-4">
-                <div class="lg:w-[20%] md:w-[20%] w-full gap-2 py-4 text-[#ffffff]">
-    
-                    <!-- new arrivals -->
-    
-                    <div>
-                        <p class="text-[#323334] text-[20px] font-roboto font-bold">New arrivals</p>
-                    </div>
-    
-                    <div>
-                        <p class="text-[#323334] text-[16px] font-roboto">New arrivals</p>
-    
-                    </div>
-    
-                    <!-- shop by room -->
-    
-                    <div>
-    
-                        <div>
-                            <p class="text-[#4C8787] font-roboto text-[20px]">Bedroom</p>
-    
-                        </div>
-    
-                        <div class="pl-4 cursor-pointer">
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">duvet cover sets</p>
-    
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">sheets</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize ">bedspreads & blankets</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">blankets</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">cutains</p>
-                        </div>
-    
-                        <div>
-                            <p class="text-[#4C8787] text-[20px] font-roboto capitalize">Rugs</p>
-                        </div>
-    
-    
-    
-                        <div class="capitalize pl-4 cursor-pointer">
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">living room</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">child room</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">bathroom</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">Outdoor</p>
-                        </div>
-    
-    
-                        <!-- shop by concept -->
-    
-                        <div>
-                            <p class="text-[#323334] font-roboto text-[23px] font-bold capitalize">shop by concept</p>
-                        </div>
-    
-                        <div class="cursor-pointer">
-    
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">Conscious</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">premium quality</p>
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">classic collection</p>
-    
-                        </div>
-    
-    
-                        <!-- Gender -->
-    
-                        <div class="text-[#323334] font-roboto text-[23px] font-bold capitalize">Gender</div>
-    
-                        <div class="flex items-center gap-2 cursor-pointer">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">Male</p>
-    
-                        </div>
-                        <div class="flex items-center gap-2 cursor-pointer">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[#323334] text-[16px] font-roboto capitalize">Female</p>
-    
-                        </div>
-    
-                        <!-- color -->
-                        <div class="text-[#323334] font-roboto text-[23px] font-bold capitalize">Color</div>
-    
-                        <div class="grid grid-cols-6 gap-3">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 100.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 101.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 102 (1).png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 110.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 104.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 103.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 111.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 112.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 113 (1).png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 114.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 116.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 115.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 117.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 118.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 119.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 120.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 122.png" alt="">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 121.png" alt="">
-                        </div>
-    
-                        <!-- price -->
-    
-                        <div>
-                            <p class=" text-[#323334] font-roboto text-[23px] font-bold capitalize">Price</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[16px] text-[#323334] font-roboto capitalize">0$ - 40$</p>
-                        </div>
-    
-                        <div class="flex items-center gap-2">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[16px] text-[#323334] font-roboto capitalize">40$ - 100$</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[16px] text-[#323334] font-roboto capitalize">100$ - 150$</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[16px] text-[#323334] font-roboto capitalize">150$ - 175$</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[16px] text-[#323334] font-roboto capitalize">175$ - 250$</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
-                            <p class="text-[16px] text-[#323334] font-roboto capitalize">250$ - 350$</p>
-                        </div>
-    
-                    </div>
-    
-    
-    
-    
-    
-    
-    
+
+        <div
+            class="lg:px-16 md:10px px-8 lg:flex md:flex grid w-full lg:justify-between md:justify-between justify-center py-4">
+            <div class="lg:w-[20%] md:w-[20%] w-full gap-2 py-4 text-[#ffffff]">
+
+                <!-- new arrivals -->
+
+                <div>
+                    <p class="text-[#323334] text-[20px] font-roboto font-bold">New arrivals</p>
                 </div>
-    
-                
-                    <div class="lg:w-[70%] md:w-[70%] w-full grid gap-4 justify-around items-center">
-                        <p class="text-[#050019] font-roboto text-[30px] font-bold">BEDROOM</p>
-        
-                        <i class="font-roboto text-[12px]">TRANSFORM YOUR BEDROOM INTERIOR WITH OUR GREAT SELECTION OF
-                            ACCESSORIES.</i>
-                        <div class="lg:flex md:flex grid gap-3 justify-between items-center">
+
+                <div>
+                    <p class="text-[#323334] text-[16px] font-roboto">New arrivals</p>
+
+                </div>
+
+                <!-- shop by room -->
+
+                <div>
+
+                    <div>
+                        <p class="text-[#4C8787] font-roboto text-[20px]">Bedroom</p>
+
+                    </div>
+
+                    <div class="pl-4 cursor-pointer">
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">duvet cover sets</p>
+
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">sheets</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize ">bedspreads & blankets</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">blankets</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">cutains</p>
+                    </div>
+
+                    <div>
+                        <p class="text-[#4C8787] text-[20px] font-roboto capitalize">Rugs</p>
+                    </div>
+
+
+
+                    <div class="capitalize pl-4 cursor-pointer">
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">living room</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">child room</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">bathroom</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">Outdoor</p>
+                    </div>
+
+
+                    <!-- shop by concept -->
+
+                    <div>
+                        <p class="text-[#323334] font-roboto text-[23px] font-bold capitalize">shop by concept</p>
+                    </div>
+
+                    <div class="cursor-pointer">
+
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">Conscious</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">premium quality</p>
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">classic collection</p>
+
+                    </div>
+
+
+                    <!-- Gender -->
+
+                    <div class="text-[#323334] font-roboto text-[23px] font-bold capitalize">Gender</div>
+
+                    <div class="flex items-center gap-2 cursor-pointer">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">Male</p>
+
+                    </div>
+                    <div class="flex items-center gap-2 cursor-pointer">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[#323334] text-[16px] font-roboto capitalize">Female</p>
+
+                    </div>
+
+                    <!-- color -->
+                    <div class="text-[#323334] font-roboto text-[23px] font-bold capitalize">Color</div>
+
+                    <div class="grid grid-cols-6 gap-3">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 100.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 101.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 102 (1).png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 110.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 104.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 103.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 111.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 112.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 113 (1).png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 114.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 116.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 115.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 117.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 118.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 119.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 120.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 122.png" alt="">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 121.png" alt="">
+                    </div>
+
+                    <!-- price -->
+
+                    <div>
+                        <p class=" text-[#323334] font-roboto text-[23px] font-bold capitalize">Price</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[16px] text-[#323334] font-roboto capitalize">0$ - 40$</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[16px] text-[#323334] font-roboto capitalize">40$ - 100$</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[16px] text-[#323334] font-roboto capitalize">100$ - 150$</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[16px] text-[#323334] font-roboto capitalize">150$ - 175$</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[16px] text-[#323334] font-roboto capitalize">175$ - 250$</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img class="w-[20px] h-[20px]" src="../assets/asset2/Rectangle 98.png" alt="">
+                        <p class="text-[16px] text-[#323334] font-roboto capitalize">250$ - 350$</p>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <div class="lg:w-[70%] md:w-[70%] w-full grid gap-4 justify-around items-center">
+                <p class="text-[#050019] font-roboto text-[30px] font-bold">BEDROOM</p>
+
+                <i class="font-roboto text-[12px]">TRANSFORM YOUR BEDROOM INTERIOR WITH OUR GREAT SELECTION OF
+                    ACCESSORIES.</i>
+                <div class="lg:flex md:flex grid gap-3 justify-between items-center">
+                    <div>
+                        <img class="w-[100px]" src="../assets/asset2/Group 131.png" alt="">
+
+                    </div>
+
+                    <div class="flex gap-2 font-roboto justify-between">
+                        <p>Models</p>
+                        <p>products</p>
+
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- <div class="grid grid-cols-3 justify-between items-center" > -->
+                <div class="grid lg:justify-center md:justify-center justify-center">
+                    <div id="brandimage" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center  gap-4">
+
+                    </div>
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center  gap-4">
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 62.png" alt="">
                             <div>
-                                <img class="w-[100px]" src="../assets/asset2/Group 131.png" alt="">
-        
-                            </div>
-        
-                            <div class="flex gap-2 font-roboto justify-between">
-                                <p>Models</p>
-                                <p>products</p>
-        
-                            </div>
-        
-        
-        
-        
-                        </div>
-        
-                        <!-- <div class="grid grid-cols-3 justify-between items-center" > -->
-                        <div class="grid lg:justify-center md:justify-center justify-center">
-                            <div id="brandimage"  class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center  gap-4">
+                                <img src="../assets/asset2/Group 113.png" alt="">
 
                             </div>
-                            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center  gap-4">
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 62.png" alt="">
-                                    <div>
-                                        <img src="../assets/asset2/Group 113.png" alt="">
-        
-                                    </div>
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 47.png" alt="">
-                                    <div>
-                                        <img src="../assets/asset2/Group 114.png" alt="">
-        
-                                    </div>
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 48.png" alt="">
-                                    <div>
-                                        <img src="../assets/asset2/Group 115 (1).png" alt="">
-        
-                                    </div>
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 65.png" alt="">
-                                    <img src="../assets/asset2/Group 116.png" alt="">
-        
-                                </div>
-        
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 66.png" alt="">
-                                    <img src="../assets/asset2/Group 117.png" alt="">
-        
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 67.png" alt="">
-                                    <img src="../assets/asset2/Group 118.png" alt="">
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 70.png" alt="">
-                                    <img src="../assets/asset2/Group 119.png" alt="">
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 71.png" alt="">
-                                    <img src="../assets/asset2/Group 120.png" alt="">
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 72.png" alt="">
-                                    <img src="../assets/asset2/Group 121.png" alt="">
-                                </div>
-        
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 75.png" alt="">
-                                    <img src="../assets/asset2/Group 122.png" alt="">
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 76.png" alt="">
-                                    <img src="../assets/asset2/Group 123.png" alt="">
-                                </div>
-                                <div class="w-[200px] h-[500px] gap-4">
-                                    <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 77.png" alt="">
-                                    <img src="../assets/asset2/Group 124.png" alt="">
-                                </div>
-        
-                            </div> 
-        
                         </div>
-        
-        
-                        <button
-                            class="items-center mx-auto my-10 font-roboto w-[200px] text-[#ffffff] h-[48px] bg-[#4C8787]">LOAD
-                            MORE</button>
-        
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 47.png" alt="">
+                            <div>
+                                <img src="../assets/asset2/Group 114.png" alt="">
+
+                            </div>
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 48.png" alt="">
+                            <div>
+                                <img src="../assets/asset2/Group 115 (1).png" alt="">
+
+                            </div>
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 65.png" alt="">
+                            <img src="../assets/asset2/Group 116.png" alt="">
+
+                        </div>
+
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 66.png" alt="">
+                            <img src="../assets/asset2/Group 117.png" alt="">
+
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 67.png" alt="">
+                            <img src="../assets/asset2/Group 118.png" alt="">
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 70.png" alt="">
+                            <img src="../assets/asset2/Group 119.png" alt="">
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 71.png" alt="">
+                            <img src="../assets/asset2/Group 120.png" alt="">
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 72.png" alt="">
+                            <img src="../assets/asset2/Group 121.png" alt="">
+                        </div>
+
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 75.png" alt="">
+                            <img src="../assets/asset2/Group 122.png" alt="">
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 76.png" alt="">
+                            <img src="../assets/asset2/Group 123.png" alt="">
+                        </div>
+                        <div class="w-[200px] h-[500px] gap-4">
+                            <img class="w-[300px] h-[300px]" src="../assets/asset2/Rectangle 77.png" alt="">
+                            <img src="../assets/asset2/Group 124.png" alt="">
+                        </div>
+
                     </div>
-    
+
+                </div>
+
+
+                <button
+                    class="items-center mx-auto my-10 font-roboto w-[200px] text-[#ffffff] h-[48px] bg-[#4C8787]">LOAD
+                    MORE</button>
+
             </div>
-        
+
+        </div>
+
 
 
 
