@@ -10,21 +10,20 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            roboto: ['Roboto', 'sans-serif']
-          },
-          colors: {
-            primary: "#F9D370"
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  fontFamily: {
+                      roboto: ['Roboto', 'sans-serif']
+                  },
+                  colors: {
+                      primary: "#F9D370"
+                  }
+              }
           }
-        }
       }
-    }
   </script>
-
   <style type="text/tailwindcss">
     @layer utilities {
     .content-auto {
@@ -42,20 +41,29 @@
   <header>
     <nav class="lg:px-16 md:px-10 px-8 flex font-roboto justify-between items-center bg-[#F9D370] py-4">
       <div class="flex items-center gap-2">
-        <img src="./assets/image 5.png" alt="">
+        <img src="../assets/image 5.png" alt="">
         <p class="lg:text-[28px] md:text-[20px] text-[18px] font-bold">BRAND NAME</p>
       </div>
 
       <div>
 
         <ul class="gap-5 lg:flex md:flex hidden">
-          <li class="text-[16px] font-bold font-roboto uppercase">home</li>
-          <li class="text-[16px] font-bold font-roboto uppercase">store</li>
-          <li class="text-[16px] font-bold font-roboto uppercase">accesories</li>
-          <li class="text-[16px] font-bold font-roboto uppercase">brand</li>
-          <li class="text-[16px] font-bold font-roboto uppercase">pages</li>
-          <li class="text-[16px] font-bold font-roboto uppercase">about us</li>
-          <li class="text-[16px] font-bold font-roboto uppercase">news</li>
+          <li onclick="navigateTo('home')"
+            class="text-[16px]  hover:transition hover:scale-105 duration-300 ease-in font-bold font-roboto uppercase cursor-pointer">
+            home</li>
+          <li onclick="navigateTo('brand')"
+            class="text-[16px] font-bold font-roboto uppercase cursor-pointer  hover:transition hover:scale-105 duration-300 ease-in">
+            category</li>
+          <li onclick="navigateTo('store')"
+            class="text-[16px] font-bold font-roboto uppercase cursor-pointer hover:transition hover:scale-105 duration-300 ease-in">
+            product</li>
+          <!-- <li class="text-[16px] font-bold font-roboto uppercase cursor-pointer ">accesories</li> -->
+          <li onclick="navigateTo('cart')"
+            class="text-[16px] font-bold font-roboto uppercase cursor-pointer  hover:transition hover:scale-105 duration-300 ease-in ">
+            cart</li>
+          <li
+            class="text-[16px] font-bold font-roboto uppercase cursor-pointer  hover:transition hover:scale-105 duration-300 ease-in ">
+            ui kit</li>
         </ul>
       </div>
 
@@ -68,18 +76,18 @@
       </div>
 
       <div class="lg:hidden md:hidden flex gap-3">
-        <img class="w-[24px] h-[27px]" src="./assets/Group 41.png" alt="">
-        <img class="w-[24px] h-[27px]" src="./assets/image 7.png" alt="">
-        <img class="w-[24px] h-[27px]" src="./assets/Group 225.png" alt="">
+        <img class="w-[24px] h-[27px]" src="../assets/Group 41.png" alt="">
+        <img class="w-[24px] h-[27px]" src="../assets/image 7.png" alt="">
+        <img class="w-[24px] h-[27px]" src="../assets/Group 225.png" alt="">
       </div>
 
 
 
     </nav>
 
-    <div class="lg:px-16 md:px-10 px-8 flex justify-center items-center  py-5">
+    <div class="lg:px-16 md:px-10 px-8 flex justify-center items-center py-5">
       <img class="relative w-[31.85px] h-[25.2px] z-10 lg:right-[185px] md:right-[125px] right-[80px]"
-        src="./assets/search.png" alt="">
+        src="../assets/search.png" alt="">
       <input
         class="lg:w-[516px] md:w-[416px] w-[316px] absolute border-2 border-black rounded-full  h-[40px] pl-10 pr-32"
         type="text">
@@ -102,7 +110,7 @@
   <div
     class="lg:px-16 md:px-10 px-8 lg:flex md:grid grid font-roboto items-center justify-center bg-primary lg:gap-0 md:gap-20 gap-5 py-10">
     <div class="lg:w-1/2 md:w-full w-full flex justify-center items-center">
-      <img src="./assets/image 2.png" alt="">
+      <img src="../assets/image 2.png" alt="">
     </div>
     <div class="lg:w-1/2 md:w-full w-full grid items-center gap-5">
       <div class="grid lg:gap-0 md:gap-5 gap-5">
@@ -124,9 +132,9 @@
   <!-- Vinatage -->
 
 
-  <div class="lg:px-16 md:px-10 px-8 lg:flex md:grid grid items-center py-10 lg:gap-0 md:gap-3 gap-5  justify-center">
+  <div class="lg:px-16 md:px-10 px-8 lg:flex md:grid grid items-center py-10 lg:gap-0 md:gap-3 gap-5 justify-center">
     <div class="lg:w-1/2 md:w-full w-full lg:flex md:flex grid items-center">
-      <img class="w-[283px] h-[283px]" src="./assets/image 3.png" alt="">
+      <img class="w-[283px] h-[283px]" src="../assets/image 3.png" alt="">
       <div class="grid gap-12">
         <p class="text-[28px] font-roboto font-bold">INNY VINTAGE CHAIR</p>
         <button class="bg-[#4C8787] w-[124px] h-[50px] text-[#ffffff]">VIEW DETAILS</button>
@@ -135,11 +143,10 @@
     </div>
 
     <div class="lg:w-1/2 bg-[#EAE9E7] md:w-full w-full lg:flex md:flex grid items-center px-5 lg:pb-0 md:pb-0 pb-5">
-      <img class="w-[283px] h-[283px]" src="./assets/image 4.png" alt="">
+      <img class="w-[283px] h-[283px]" src="../assets/image 4.png" alt="">
       <div class="grid gap-12">
         <p class="text-[28px] font-roboto font-bold">LARGE TERRACOTA VASE </p>
         <button class="bg-[#4C8787] w-[124px] h-[50px] text-[#ffffff]">VIEW DETAILS</button>
-
       </div>
 
     </div>
@@ -147,10 +154,11 @@
 
   </div>
 
+  <!-- LINEN BEACH TOWEL -->
   <div class="lg:px-16 md:px-10 px-8 py-10 grid justify-center items-center">
 
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-2">
+    <div id="Image" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-2">
 
       <div class="w-[260px] h-[450px] bg-no-repeat bg-cover" style="background-image: url(../assets/Rectangle\ 5.png);">
         <div class="bg-[#000] opacity-50 h-full grid justify-center items-center px-5">
@@ -247,7 +255,7 @@
         <div class="bg-[#000] opacity-50 h-full grid justify-center items-center px-5">
           <div class="grid gap-10 items-center justify-center">
             <p class="text-[28px] font-bold font-roboto text-[#ffffff]">BOHO CHIC</p>
-            <p class="text-[#ffffff]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi temporibus,
+            <p class="text-[#fff]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi temporibus,
               hic
               nostrum impedit vero inventore suscipit unde? Suscipit, accusamus!</p>
           </div>
@@ -310,8 +318,9 @@
   <div class="lg:px-16 md:px-10 px-8 grid justify-center items-center py-10">
     <p class=" text-[34px] text-[#323334] font-roboto py-4">TOP RATING</p>
 
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center gap-10 justify-center font-bold">
-      <div class="w-[340px] h-[300px] flex bg-[#ffffff]  items-center gap-2">
+    <div id="Product"
+      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center gap-10  justify-center font-bold">
+      <!-- <div class="w-[340px] h-[300px] flex bg-[#ffffff] items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 26.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class="text-[#323334] font-roboto text-[18px]">Tray With Foot</p>
@@ -329,9 +338,9 @@
 
         </div>
 
-      </div>
+      </div> -->
 
-      <div class="w-[340px] h-[300px] flex justify-center items-center gap-2">
+      <!-- <div class="w-[340px] h-[300px] flex justify-center items-center gap-2">
         <img class="w-[150px] h-[300px] " src="../assets/Rectangle 27.png" alt="">
         <div class="grid gap-3 items-center justify-center">
           <p class="  text-[#323334] font-roboto text-[18px]">Twill
@@ -350,9 +359,9 @@
 
         </div>
 
-      </div>
+      </div> -->
 
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 30.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class="text-[#323334] font-roboto text-[18px]">Fluted Beverage
@@ -371,10 +380,10 @@
 
         </div>
 
-      </div>
+      </div> -->
 
 
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 29.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class=" text-[#323334] font-roboto text-[18px] ">
@@ -393,9 +402,9 @@
 
         </div>
 
-      </div>
+      </div> -->
 
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 33.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class=" text-[#323334] font-roboto text-[18px]">Small
@@ -415,8 +424,8 @@
 
         </div>
 
-      </div>
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      </div> -->
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 34.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class=" text-[#323334] font-roboto text-[18px] ">
@@ -434,8 +443,8 @@
 
         </div>
 
-      </div>
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      </div> -->
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px] " src="../assets/Rectangle 30.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class=" text-[#323334] font-roboto text-[18px]">4-pack Ceramic
@@ -454,9 +463,9 @@
 
         </div>
 
-      </div>
+      </div> -->
 
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 31.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class=" text-[#323334] font-roboto text-[18px]">2-pack Linen
@@ -475,8 +484,8 @@
 
         </div>
 
-      </div>
-      <div class="w-[340px] h-[300px] flex items-center gap-2">
+      </div> -->
+      <!-- <div class="w-[340px] h-[300px] flex items-center gap-2">
         <img class="w-[150px] h-[300px]" src="../assets/Rectangle 32.png" alt="">
         <div class="grid items-center justify-center gap-3">
           <p class=" text-[#323334] font-roboto text-[18px] ">
@@ -497,12 +506,13 @@
 
         </div>
 
-      </div>
+      </div> -->
 
 
     </div>
 
-    <button class="items-center mx-auto my-10 font-roboto w-[200px] text-[#ffffff] h-[48px] bg-[#4C8787]">LOAD
+    <button
+      class="items-center grid justify-center text-center mx-auto my-10 font-roboto w-[200px] text-[#ffffff] h-[48px] bg-[#4C8787]">LOAD
       MORE</button>
 
   </div>
@@ -620,17 +630,17 @@
       <p class="font-roboto text-[#ffffff] text-center">Brand Registered Name © – All rights reserved </p>
 
     </div>
+
+  </div>
+
+  <div>
+
   </div>
 
 
 
 
-
-
-
-
-
-
+  <script src="index.js"></script>
 </body>
 
 </html>
