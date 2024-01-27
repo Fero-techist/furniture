@@ -219,3 +219,11 @@ containers.innerHTML = productItem.join("")
 
 
 
+function toggleMenu(){
+    const navLinks = document.querySelector('.nav-links')
+    navLinks.classList.toggle('hidden')
+}
+
+function navigate(page){
+    toggleMenu(page);
+}
